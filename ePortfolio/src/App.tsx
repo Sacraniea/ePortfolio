@@ -1,7 +1,12 @@
 import Navbar from './components/navbar/Navbar'
 import {Cpu, CodeXml, CircuitBoard, ArrowRight} from 'lucide-react'
- import { Link } from "react-router-dom";
-import {PythonIcon, CIcon, MATLABIcon, SQLIcon} from './assets/SVG'
+import { Link } from "react-router-dom";
+import
+{
+  PythonIcon, CIcon, MATLABIcon, SQLIcon, MicrochipIcon, 
+  AssemblyIcon, HardwareIcon, BareMetalIcon, PCBIcon,
+  ResistorIcon, WaveformIcon, BreadboardIcon
+} from './assets/SVG'
 
 
 
@@ -97,7 +102,7 @@ const App = () => {
             <div className='skills-grid'>
 
               <div className='skills-card large glass-pane glass-pane--interactive shine'>
-                <p className='glass-button python'>
+                <p className='glass-button python icon'>
                   <PythonIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> Python </p>
@@ -107,11 +112,10 @@ const App = () => {
                   <p className='glass-button tag'>PennyLane</p>
                   <p className='glass-button tag'>PyTorch</p>
                   <p className='glass-button tag'>Pandas</p>
-                  <p className='glass-button tag'>MISRA C</p>
                 </div>
               </div>
               <div className='skills-card glass-pane glass-pane--interactive shine'>
-                <p className='glass-button c'>
+                <p className='glass-button c icon'>
                   <CIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> C / C++ </p>
@@ -120,11 +124,12 @@ const App = () => {
                   <p className='glass-button tag'>GCC</p>
                   <p className='glass-button tag'>GDB</p>
                   <p className='glass-button tag'>Valgrind</p>
+                  <p className='glass-button tag'>MISRA C</p>
                 </div>
                 
               </div>
               <div className='skills-card glass-pane glass-pane--interactive shine'>
-                <p className='glass-button matlab'>
+                <p className='glass-button matlab icon'>
                   <MATLABIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> MATLAB </p>
@@ -136,7 +141,7 @@ const App = () => {
                 </div>
               </div>
               <div className='skills-card large glass-pane glass-pane--interactive shine'>
-                <p className='glass-button sql'>
+                <p className='glass-button sql icon'>
                   <SQLIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> SQL </p>
@@ -163,8 +168,8 @@ const App = () => {
             <div className='skills-grid'>
 
               <div className='skills-card large glass-pane glass-pane--interactive shine'>
-                <p className='glass-button python'>
-                  <PythonIcon width={28} height={28} />
+                <p className='glass-button microchip icon'>
+                  <MicrochipIcon width={24} height={24} />
                 </p>
                 <p className='card-header'> VHDL / FPGA </p>
                 <p className='sm-subtitle'> Designing custom digital logic, high performance physical computing pipelines, and hardware accelerators.</p>
@@ -176,21 +181,21 @@ const App = () => {
                 </div>
               </div>
               <div className='skills-card glass-pane glass-pane--interactive shine'>
-                <p className='glass-button c'>
-                  <CIcon width={28} height={28} />
+                <p className='glass-button asm icon'>
+                  <AssemblyIcon width={32} height={32} />
                 </p>
                 <p className='card-header'> Assembly </p>
                 <p className='sm-subtitle'> Low-level programming for embedded systems, register manipulation, and performance-critical code optimization.</p>
                 <div className='card-tags'>
-                  <p className='glass-button tag'>GCC</p>
-                  <p className='glass-button tag'>GDB</p>
-                  <p className='glass-button tag'>Valgrind</p>
+                  <p className='glass-button tag'>AVR</p>
+                  <p className='glass-button tag'>Registers</p>
+                  <p className='glass-button tag'>Bit Manipulation</p>
                 </div>
                 
               </div>
               <div className='skills-card glass-pane glass-pane--interactive shine'>
-                <p className='glass-button matlab'>
-                  <MATLABIcon width={28} height={28} />
+                <p className='glass-button hardware icon'>
+                  <HardwareIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> Hardware Interfacing </p>
                 <p className='sm-subtitle'> Designing and implementing hardware interfaces for embedded systems.</p>
@@ -202,8 +207,8 @@ const App = () => {
                 </div>
               </div>
               <div className='skills-card large glass-pane glass-pane--interactive shine'>
-                <p className='glass-button sql'>
-                  <SQLIcon width={28} height={28} />
+                <p className='glass-button bare-metal icon'>
+                  <BareMetalIcon width={28} height={28} />
                 </p>
                 <p className='card-header'> Bare-Metal </p>
                 <p className='sm-subtitle'> Low-Level Hardware Control, Memory-Mapped Register Manipulation, and Managing Interrupt Service Routines.</p>
@@ -217,9 +222,73 @@ const App = () => {
 
             </div>
           </div>
+
+          <div className='skill-entry'>
+
+            <div className='skill-description reverse'>
+              <h3 className='card-header'> Design & Simulation </h3>
+              <p className='sm-subtitle'> Experience with theoretical circuit analysis, software-based system simulation, and physical hardware validation. </p>
+            </div>
+
+            <div className='skills-grid'>
+
+              <div className='skills-card large glass-pane glass-pane--interactive shine'>
+                <p className='glass-button PCB icon'>
+                  <PCBIcon width={28} height={28} />
+                </p>
+                <p className='card-header'> PCB Layout & Routing </p>
+                <p className='sm-subtitle'> Multi-layer PCB Design, Schematic Capture, Component Library Management, Performance-Optimized Routing.</p>
+                <div className='card-tags'>
+                  <p className='glass-button tag'>KiCad</p>
+                  <p className='glass-button tag'>Autodesk Eagle</p>
+                  <p className='glass-button tag'>Gerber Generation</p>
+                  <p className='glass-button tag'>DRC</p>
+                </div>
+              </div>
+              <div className='skills-card glass-pane glass-pane--interactive shine'>
+                <p className='glass-button resistor icon'>
+                  <ResistorIcon width={32} height={32} />
+                </p>
+                <p className='card-header'> Circuit Analysis </p>
+                <p className='sm-subtitle'>Analog & Mixed-Signal Analysis, Filter Design, Power Distribution Evaluation, Component Tolerance Calculation.</p>
+                <div className='card-tags'>
+                  <p className='glass-button tag'>Impedence</p>
+                  <p className='glass-button tag'>Ohms's Law</p>
+                  <p className='glass-button tag'>Kirchoff's Laws</p>
+                </div>
+                
+              </div>
+              <div className='skills-card glass-pane glass-pane--interactive shine'>
+                <p className='glass-button waveform icon'>
+                  <WaveformIcon width={40} height={40} />
+                </p>
+                <p className='card-header'> Simulation & Modeling </p>
+                <p className='sm-subtitle'> SPICE Circuit Simulation, Mathematical System Modeling, Signal Integrity Verifivation, Frequency Response Analysis.</p>
+                <div className='card-tags'>
+                  <p className='glass-button tag'>LTSpice</p>
+                  <p className='glass-button tag'>Transients</p>
+                  <p className='glass-button tag'>AC / DC Sweep</p>
+                </div>
+              </div>
+              <div className='skills-card large glass-pane glass-pane--interactive shine'>
+                <p className='glass-button breadboard icon'>
+                  <BreadboardIcon width={28} height={28} />
+                </p>
+                <p className='card-header'> Prototyping & Diagnostics</p>
+                <p className='sm-subtitle'> Hardware Validation, Benchtop Equipment Testing, Signal Debugging, SMD Soldering.</p>
+                <div className='card-tags'>
+                  <p className='glass-button tag'>Oscilloscopes</p>
+                  <p className='glass-button tag'>Logic Analyzers</p>
+                  <p className='glass-button tag'>Multimeters</p>
+                  <p className='glass-button tag'>Bench Power</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-      *</section>41
+      </section>
 
 
 {/* TEMPORARILY REMOVED FOR RESTRUCTURE        
