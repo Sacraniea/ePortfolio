@@ -279,56 +279,48 @@
     gap: var(--space-md);
   }
 
-
-
-  /* Focus Section */
-  
+.capsule-selector
+{
+  align-self: center;
+  position: relative;
+  display: flex;
+  border-radius: 100px;
+}
 
 .focus, .skills, .projects
 {
   position: relative;
   z-index: 1;
-  width: 100%;
-  max-width: 60vw;
+  min-width: 300px;
+  max-width: 1000px;
   margin: 0 auto;
-
+  gap: var(--space-2xl);
   display: flex;
   flex-direction: column;
   text-align: center;
-
   padding: 6rem 2rem;
-  gap: 30vh;
 }
 
-  .focus-cards, .philosophy-cards, .project-cards, .skill-entry
+
+.skill-entry
+{
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: center; 
+  gap: 3rem;
+}
+
+.philosophy-cards, .project-cards
   {
-    padding-top: var(--space-lg);
+    padding-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: center; 
-    gap: var(--space-lg);
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    gap: 3rem;
   }
 
-  .focus-card
-  {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: var(--space-lg);
-    gap: var(--space-sm);
-  }
 
-  .philosophy-card
-  {
-    grid-column: 1 / span 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: var(--space-xl);
-    gap: var(--space-xl);
-  }
   .card-icon
   {
     color: var(--color-accent);
@@ -349,9 +341,6 @@
     color: #b4b4b4;
   }
 
-
-
-
 /* Skills ection */
 
 .skills-grid
@@ -359,10 +348,7 @@
   grid-column: 2 / span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* 1. LOCK the 2-column layout forever */
   
-  
-  /* 2. FLUID GAP: 0.5rem on phones, up to your standard var(--space-md) on desktop */
   gap: clamp(0.5rem, 2vw, var(--space-md)); 
   justify-content: center;
 }
@@ -374,7 +360,6 @@
 
 .skills-card
 {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -487,7 +472,16 @@
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
-  /* Projects Section */
+
+
+
+
+
+
+
+
+
+/* Projects Section */
 
  .project-card
 {
@@ -527,40 +521,13 @@
   align-items: flex-start;
 }
 
-
-@media (max-width: 1200px)
+.philosophy-card
 {
- 
-  .focus, .skills, .projects
-  {
-    max-width: 80vw; 
-  }
-  /* 1. Tell the parent wrapper to stop using 280px columns and take full width */
-  .skill-entry
-  {
-    grid-template-columns: 1fr; 
-  }
-  
-  /* 2. Make the text/heading take up the full width so it sits on top */
-  .skill-entry > div:first-child
-  {
-    grid-column: 1 / -1; 
-    margin-bottom: var(--space-md); 
-  }
-
-  /* 3. Force the Bento box to drop down and take up the full width underneath */
-  .skills-grid 
-  {
-    grid-column: 1 / -1; 
-  }
-}
-
-
-@media (max-width: 1436px)
-{
-  .focus-cards, .project-cards
-  {
-    /* 2. Instantly jump from 3 columns down to 1 column */
-    grid-template-columns: 1fr; 
-  }
+  grid-column: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--space-xl);
+  gap: var(--space-xl);
 }
